@@ -6,28 +6,33 @@ class RecentProvider {
 
 List demoRecentFiles = [
   RecentProvider(
-    icon: "assets/images/profile_pic.png",
+    icon: "assets/icons/profile_pic.svg",
     title: "Mary Lu",
     date: "Nairobi, Kenya",
     size: "action"
   ),
   RecentProvider(
-    icon: "assets/images/profile_pic.png",
+    icon: "assets/icons/profile_pic.svg",
     title: "Mary Lu",
     date: "Nairobi, Kenya",
     size: "action",
   ),
   RecentProvider(
-    icon: "assets/images/profile_pic.png",
+    icon: "assets/icons/profile_pic.svg",
     title: "Mary Lu",
     date: "Nairobi, Kenya",
     size: "action",
   ),
   RecentProvider(
-    icon: "assets/images/profile_pic.png",
+    icon: "assets/icons/profile_pic.svg",
     title: "Mary Lu",
     date: "Nairobi, Kenya",
     size: "action",
   ),
-
+  RecentProvider(
+    icon: "assets/icons/profile_pic.svg",
+    title: "Mary Lu",
+    date: "Nairobi, Kenya",
+    size: "action",
+  ),
 ];
