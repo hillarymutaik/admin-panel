@@ -27,27 +27,38 @@ class FileInfoCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.all(defaultPadding * 0.75),
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  color: info.color!.withOpacity(0.1),
-                  borderRadius: const BorderRadius.all(Radius.circular(10)),
-                ),
-                child: SvgPicture.asset(
-                  info.svgSrc!,
-                  color: info.color,
-                ),
+              Text(
+                "0",
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+
               ),
-              Icon(Icons.more_vert, color: Colors.black)
+              // Icon(Icons.more_vert, color: Colors.black)
             ],
           ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
           Text(
             info.title!,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
+          Container(
+            padding: EdgeInsets.all(defaultPadding * 0.75),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              color: info.color!.withOpacity(0.1),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+            ),
+            child: SvgPicture.asset(
+              info.svgSrc!,
+              color: info.color,
+            ),
+          ),
+          ]
+      ),
           // ProgressLine(
           //   color: info.color,
           //   // percentage: info.percentage,

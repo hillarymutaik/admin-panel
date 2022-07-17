@@ -18,9 +18,9 @@ class CloudStorageInfo {
 
 List demoMyFiles = [
   CloudStorageInfo(
-    title: "Total Bookings",
+    title: "TotalBookings",
     numOfFiles: "More Info...",
-    svgSrc: "assets/icons/Documents.svg",
+    svgSrc: "assets/icons/booking.svg",
     // totalStorage: "1.9GB",
     color: primaryColor,
     // percentage: 35,
@@ -28,7 +28,7 @@ List demoMyFiles = [
   CloudStorageInfo(
     title: "Total Earnings",
     numOfFiles: "More Info...",
-    svgSrc: "assets/icons/google_drive.svg",
+    svgSrc: "assets/icons/dollar.svg",
     // totalStorage: "2.9GB",
     color: Color(0xFFFFA113),
     // percentage: 35,
@@ -36,15 +36,15 @@ List demoMyFiles = [
   CloudStorageInfo(
     title: "Providers",
     numOfFiles: "More Info...",
-    svgSrc: "assets/icons/one_drive.svg",
+    svgSrc: "assets/icons/provide.svg",
     // totalStorage: "1GB",
     color: Color(0xFFA4CDFF),
     // percentage: 10,
   ),
   CloudStorageInfo(
-    title: "Total Customers",
+    title: "Customers",
     numOfFiles: "More Info...",
-    svgSrc: "assets/icons/drop_box.svg",
+    svgSrc: "assets/icons/people.svg",
     // totalStorage: "7.3GB",
     color: Color(0xFF007EE5),
     // percentage: 78,
