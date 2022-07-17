@@ -46,8 +46,8 @@ class FileInfoCard extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(defaultPadding * 0.75),
-            height: 50,
-            width: 50,
+            height: 60,
+            width: 60,
             decoration: BoxDecoration(
               color: info.color!.withOpacity(0.1),
               borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -55,6 +55,8 @@ class FileInfoCard extends StatelessWidget {
             child: SvgPicture.asset(
               info.svgSrc!,
               color: info.color,
+              height: 100,
+              width: 60,
             ),
           ),
           ]
@@ -104,7 +106,7 @@ class ProgressLine extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 5,
+          height: 7,
           decoration: BoxDecoration(
             color: color!.withOpacity(0.1),
             borderRadius: BorderRadius.all(Radius.circular(3)),

@@ -51,7 +51,7 @@ class RecentFiles extends StatelessWidget {
             width: double.infinity,
             child: DataTable2(
               columnSpacing: defaultPadding,
-              minWidth: 600,
+              minWidth: 400,
               columns: [
                 DataColumn(
                   label: Text("Earning over time"),

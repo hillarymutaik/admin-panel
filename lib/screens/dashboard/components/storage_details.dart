@@ -56,7 +56,7 @@ class StarageDetails extends StatelessWidget {
             width: double.infinity,
             child: DataTable2(
               columnSpacing: defaultPadding,
-              minWidth: 800,
+              minWidth: 500,
               columns: [
                 DataColumn(
                   label: Text("Provider"),
