@@ -39,7 +39,7 @@ class MyFiles extends StatelessWidget {
         SizedBox(height: defaultPadding),
         Responsive(
           mobile: FileInfoCardGridView(
-            crossAxisCount: _size.width < 750 ? 2 : 4,
+            crossAxisCount: _size.width < 650 ? 2 : 4,
             childAspectRatio: _size.width < 650 && _size.width > 350 ? 1.3 : 1,
           ),
           tablet: FileInfoCardGridView(),

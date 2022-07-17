@@ -18,35 +18,35 @@ class CloudStorageInfo {
 
 List demoMyFiles = [
   CloudStorageInfo(
-    title: "TotalBookings",
+    title: "Total Bookings",
     numOfFiles: "More Info...",
     svgSrc: "assets/icons/booking.svg",
     // totalStorage: "1.9GB",
-    color: primaryColor,
-    // percentage: 35,
+    color: Colors.black,
+    // percentage: 35,primaryColor
   ),
   CloudStorageInfo(
     title: "Total Earnings",
     numOfFiles: "More Info...",
     svgSrc: "assets/icons/dollar.svg",
     // totalStorage: "2.9GB",
-    color: Color(0xFFFFA113),
-    // percentage: 35,
+    color: Colors.black,
+    // percentage: 35,Color(0xFFFFA113)
   ),
   CloudStorageInfo(
     title: "Providers",
     numOfFiles: "More Info...",
     svgSrc: "assets/icons/provide.svg",
     // totalStorage: "1GB",
-    color: Color(0xFFA4CDFF),
-    // percentage: 10,
+    color: Colors.black,
+    // percentage: 10,Color(0xFFA4CDFF)
   ),
   CloudStorageInfo(
-    title: "Customers",
+    title: "Total Customers",
     numOfFiles: "More Info...",
     svgSrc: "assets/icons/people.svg",
     // totalStorage: "7.3GB",
-    color: Color(0xFF007EE5),
-    // percentage: 78,
+    color: Colors.black,
+    // percentage: 78,Color(0xFF007EE5)
   ),
 ];

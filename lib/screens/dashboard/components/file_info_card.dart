@@ -29,9 +29,13 @@ class FileInfoCard extends StatelessWidget {
             children: [
               Text(
                 "0",
+
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 20
+                ),
               ),
               // Icon(Icons.more_vert, color: Colors.black)
             ],
@@ -44,21 +48,22 @@ class FileInfoCard extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          Container(
-            padding: EdgeInsets.all(defaultPadding * 0.75),
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              color: info.color!.withOpacity(0.1),
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
-            ),
-            child: SvgPicture.asset(
+          // Container(
+          //   padding: EdgeInsets.all(defaultPadding * 0.75),
+          //   height: 60,
+          //   width: 60,
+          //   decoration: BoxDecoration(
+          //     color: info.color!.withOpacity(0.1),
+          //     borderRadius: const BorderRadius.all(Radius.circular(10)),
+          //   ),
+          //   child:
+            SvgPicture.asset(
               info.svgSrc!,
               color: info.color,
               height: 100,
               width: 60,
             ),
-          ),
+          // ),
           ]
       ),
           // ProgressLine(
@@ -90,39 +95,39 @@ class FileInfoCard extends StatelessWidget {
   }
 }
 
-class ProgressLine extends StatelessWidget {
-  const ProgressLine({
-    Key? key,
-    this.color = primaryColor,
-    // required this.percentage,
-  }) : super(key: key);
-
-  final Color? color;
-  // final int? percentage;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: double.infinity,
-          height: 7,
-          decoration: BoxDecoration(
-            color: color!.withOpacity(0.1),
-            borderRadius: BorderRadius.all(Radius.circular(3)),
-          ),
-        ),
-        LayoutBuilder(
-          builder: (context, constraints) => Container(
-            // width: constraints.maxWidth * (percentage! / 100),
-            height: 5,
-            decoration: BoxDecoration(
-              color: color,
-              borderRadius: BorderRadius.all(Radius.circular(3)),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
+// class ProgressLine extends StatelessWidget {
+//   const ProgressLine({
+//     Key? key,
+//     this.color = primaryColor,
+//     // required this.percentage,
+//   }) : super(key: key);
+//
+//   final Color? color;
+//   // final int? percentage;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Stack(
+//       children: [
+//         Container(
+//           width: double.infinity,
+//           height: 7,
+//           decoration: BoxDecoration(
+//             color: color!.withOpacity(0.1),
+//             borderRadius: BorderRadius.all(Radius.circular(3)),
+//           ),
+//         ),
+//         LayoutBuilder(
+//           builder: (context, constraints) => Container(
+//             // width: constraints.maxWidth * (percentage! / 100),
+//             height: 5,
+//             decoration: BoxDecoration(
+//               color: color,
+//               borderRadius: BorderRadius.all(Radius.circular(3)),
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
