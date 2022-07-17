@@ -20,32 +20,53 @@ class SideMenu extends StatelessWidget {
             press: () {},
           ),
           DrawerListTile(
-            title: "Transaction",
+            title: "Modules",
             svgSrc: "assets/icons/menu_tran.svg",
             press: () {},
           ),
           DrawerListTile(
-            title: "Task",
+            title: "Notification",
             svgSrc: "assets/icons/menu_task.svg",
             press: () {},
           ),
           DrawerListTile(
-            title: "Documents",
+            title: "Favourites",
             svgSrc: "assets/icons/menu_doc.svg",
             press: () {},
           ),
           DrawerListTile(
-            title: "Store",
+            title: "App Management",
             svgSrc: "assets/icons/menu_store.svg",
             press: () {},
           ),
           DrawerListTile(
-            title: "Notification",
+            title: "Providers",
             svgSrc: "assets/icons/menu_notification.svg",
             press: () {},
           ),
           DrawerListTile(
-            title: "Profile",
+            title: "Categories",
+            svgSrc: "assets/icons/menu_profile.svg",
+            press: () {},
+          ),
+          DrawerListTile(
+            title: "Services",
+            svgSrc: "assets/icons/menu_profile.svg",
+            press: () {},
+          ),
+          DrawerListTile(
+            title: "Bookings",
+            svgSrc: "assets/icons/menu_profile.svg",
+            press: () {},
+          ),
+          DrawerListTile(
+            title: "Coupons",
+            svgSrc: "assets/icons/menu_profile.svg",
+            press: () {},
+          ),
+
+          DrawerListTile(
+            title: "FAQs",
             svgSrc: "assets/icons/menu_profile.svg",
             press: () {},
           ),
@@ -79,12 +100,12 @@ class DrawerListTile extends StatelessWidget {
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
-        color: Colors.white54,
+        color: Colors.black,
         height: 16,
       ),
       title: Text(
         title,
-        style: TextStyle(color: Colors.white54),
+        style: TextStyle(color: Colors.black),
       ),
     );
   }

@@ -18,7 +18,7 @@ class FileInfoCard extends StatelessWidget {
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
         color: secondaryColor,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +40,7 @@ class FileInfoCard extends StatelessWidget {
                   color: info.color,
                 ),
               ),
-              Icon(Icons.more_vert, color: Colors.white54)
+              Icon(Icons.more_vert, color: Colors.black)
             ],
           ),
           Text(
@@ -48,27 +48,27 @@ class FileInfoCard extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          ProgressLine(
-            color: info.color,
-            percentage: info.percentage,
-          ),
+          // ProgressLine(
+          //   color: info.color,
+          //   // percentage: info.percentage,
+          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "${info.numOfFiles} Files",
+                "${info.numOfFiles} ",
                 style: Theme.of(context)
                     .textTheme
                     .caption!
-                    .copyWith(color: Colors.white70),
+                    .copyWith(color: Colors.black),
               ),
-              Text(
-                info.totalStorage!,
-                style: Theme.of(context)
-                    .textTheme
-                    .caption!
-                    .copyWith(color: Colors.white),
-              ),
+              // Text(
+              //   info.totalStorage!,
+              //   style: Theme.of(context)
+              //       .textTheme
+              //       .caption!
+              //       .copyWith(color: Colors.white),
+              // ),
             ],
           )
         ],
@@ -81,11 +81,11 @@ class ProgressLine extends StatelessWidget {
   const ProgressLine({
     Key? key,
     this.color = primaryColor,
-    required this.percentage,
+    // required this.percentage,
   }) : super(key: key);
 
   final Color? color;
-  final int? percentage;
+  // final int? percentage;
 
   @override
   Widget build(BuildContext context) {
@@ -96,16 +96,16 @@ class ProgressLine extends StatelessWidget {
           height: 5,
           decoration: BoxDecoration(
             color: color!.withOpacity(0.1),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(3)),
           ),
         ),
         LayoutBuilder(
           builder: (context, constraints) => Container(
-            width: constraints.maxWidth * (percentage! / 100),
+            // width: constraints.maxWidth * (percentage! / 100),
             height: 5,
             decoration: BoxDecoration(
               color: color,
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: BorderRadius.all(Radius.circular(3)),
             ),
           ),
         ),

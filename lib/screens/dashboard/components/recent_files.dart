@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
+import '../../../responsive.dart';
 
 class RecentFiles extends StatelessWidget {
   const RecentFiles({
@@ -16,15 +17,36 @@ class RecentFiles extends StatelessWidget {
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
         color: secondaryColor,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Recent Files",
-            style: Theme.of(context).textTheme.subtitle1,
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Earnings",
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+
+              Text(
+                "All payments",
+                style: Theme.of(context).textTheme.subtitle1,
+
+              ),
+
+              // if (!Responsive.isMobile(context));
+                // Padding(
+                //   padding:
+                //   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                //   child: Text("Arcade Carwash"),
+                // ),
+            ],
           ),
+
+
           SizedBox(
             width: double.infinity,
             child: DataTable2(
@@ -32,14 +54,14 @@ class RecentFiles extends StatelessWidget {
               minWidth: 600,
               columns: [
                 DataColumn(
-                  label: Text("File Name"),
+                  label: Text("Earning over time"),
                 ),
                 DataColumn(
-                  label: Text("Date"),
+                  label: Text("Total Booking"),
                 ),
-                DataColumn(
-                  label: Text("Size"),
-                ),
+                // DataColumn(
+                //   label: Text("Size"),
+                // ),
               ],
               rows: List.generate(
                 demoRecentFiles.length,
@@ -59,11 +81,11 @@ DataRow recentFileDataRow(RecentFile fileInfo) {
       DataCell(
         Row(
           children: [
-            SvgPicture.asset(
-              fileInfo.icon!,
-              height: 30,
-              width: 30,
-            ),
+            // SvgPicture.asset(
+            //   fileInfo.icon!,
+            //   height: 30,
+            //   width: 30,
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: Text(fileInfo.title!),
@@ -72,7 +94,7 @@ DataRow recentFileDataRow(RecentFile fileInfo) {
         ),
       ),
       DataCell(Text(fileInfo.date!)),
-      DataCell(Text(fileInfo.size!)),
+      // DataCell(Text(fileInfo.size!)),
     ],
   );
 }
