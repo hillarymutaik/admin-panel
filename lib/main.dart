@@ -1,6 +1,6 @@
-import 'package:admin/constants.dart';
-import 'package:admin/controllers/MenuController.dart';
-import 'package:admin/screens/main/main_screen.dart';
+import 'package:car_wash/constants.dart';
+import 'package:car_wash/controllers/MenuController.dart';
+import 'package:car_wash/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';

@@ -1,5 +1,5 @@
-import 'package:admin/controllers/MenuController.dart';
-import 'package:admin/responsive.dart';
+import 'package:car_wash/controllers/MenuController.dart';
+import 'package:car_wash/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';

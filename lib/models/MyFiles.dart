@@ -1,4 +1,4 @@
-import 'package:admin/constants.dart';
+import 'package:car_wash/constants.dart';
 import 'package:flutter/material.dart';
 
 class CloudStorageInfo {

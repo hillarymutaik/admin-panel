@@ -1,5 +1,5 @@
-import 'package:admin/models/MyFiles.dart';
-import 'package:admin/responsive.dart';
+import 'package:car_wash/models/MyFiles.dart';
+import 'package:car_wash/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
