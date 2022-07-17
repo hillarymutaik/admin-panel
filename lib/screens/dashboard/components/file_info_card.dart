@@ -34,7 +34,8 @@ class FileInfoCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: Colors.blue,
-                  fontSize: 20
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold
                 ),
               ),
               // Icon(Icons.more_vert, color: Colors.black)
@@ -60,7 +61,7 @@ class FileInfoCard extends StatelessWidget {
             SvgPicture.asset(
               info.svgSrc!,
               color: info.color,
-              height: 100,
+              height: 60,
               width: 60,
             ),
           // ),
@@ -71,7 +72,7 @@ class FileInfoCard extends StatelessWidget {
           //   // percentage: info.percentage,
           // ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "${info.numOfFiles} ",
