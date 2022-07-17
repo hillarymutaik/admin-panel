@@ -29,7 +29,6 @@ class FileInfoCard extends StatelessWidget {
             children: [
               Text(
                 "0",
-
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
