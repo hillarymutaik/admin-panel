@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 import '../../../controllers/MenuController.dart';
-import '../../../models/recent_providers.dart';
+import '../../../models/provider_items.dart';
 import '../../../responsive.dart';
 import 'chart.dart';
 import 'storage_info_card.dart';

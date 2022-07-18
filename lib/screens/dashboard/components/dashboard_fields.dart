@@ -1,9 +1,9 @@
-import 'package:car_wash/models/MyFiles.dart';
+import 'package:car_wash/models/cards.dart';
 import 'package:car_wash/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import 'file_info_card.dart';
+import 'dashboard_card.dart';
 
 class MyFiles extends StatelessWidget {
   const MyFiles({

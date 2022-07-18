@@ -1,12 +1,12 @@
 import 'package:car_wash/responsive.dart';
-import 'package:car_wash/screens/dashboard/components/my_fields.dart';
+import 'package:car_wash/screens/dashboard/components/dashboard_fields.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
 import 'components/header.dart';
 
-import 'components/recent_files.dart';
-import 'components/storage_details.dart';
+import 'components/earnings.dart';
+import 'components/provider_details.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override

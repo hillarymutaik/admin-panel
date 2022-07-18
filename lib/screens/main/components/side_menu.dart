@@ -269,3 +269,102 @@ class DrawerListTile extends StatelessWidget {
     );
   }
 }
+
+//
+// /// This is BAD since you only return one boolean value and I needed multiple items from  the list to be toggled
+// bool _active = false;
+//
+// void _handleTap(index) {
+//   setState(() {
+//     _active = !_active;
+//   });
+// }
+//
+// //// This is GOOD (or at least the right approach) since I needed multiple choices
+// /// this stores the indices of active items like @pskink said, so you can toggle each item in the list
+// Set active = {};
+//
+// void _handleTap(index) {
+//   setState(() {
+//     active.contains(index) ? active.remove(index) : active.add(index);
+//   });
+// }
+//
+// @override
+// Widget build(BuildContext context) {
+//   return Scaffold(
+//       body: SafeArea(
+//       child: FutureBuilder<HTTPResponse<List<UserData>>>(
+//       future: _getUserList(),
+//   builder: (context, snapshot) {
+//   if (snapshot.hasData) {
+//   return Consumer<UserDataModel>(
+//   builder: (context, userData, child) {
+//   return ListView.builder(
+//   itemCount: userData.userList.length,
+//   itemBuilder: (context, index) {
+//   UserData users =
+//   userData.getUserbyIndex(index);
+//   return Card(
+//   child: Container(
+//   decoration: BoxDecoration(
+//   /// This is where the widget checks which item in the list is selected and change color when you trigger the _handleTap() method
+//   color: active.contains(index) ? Colors.white : Colors.grey[400],
+//   ),
+//   padding: EdgeInsets.all(10.0),
+//   child: PopupMenuButton<UserDropDownMenu>(
+//   onSelected: (action) {
+//   switch (action) {
+//   case UserDropDownMenu.activity:
+// // where you call the method and the colors of the widget toggle
+//   _handleTap(index);
+//   break;
+//   }
+//   },
+//   itemBuilder: (BuildContext context) =>
+//   const PopupMenuItem<UserDropDownMenu>(
+//   value: UserDropDownMenu.activity,
+//   child: Text('Active/Inactive'),
+//   ),
+//   ),
+//   }
+//   );
+//   },
+//   );
+//   },
+//   );
+//   } else if (snapshot.hasError) {
+//   return Text("${snapshot.error}");
+//   }
+//   return Container();
+// },
+// ),
+// ),
+// );
+// }
+// }
+
+
+// npm install firebase
+//
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+//
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyANv4PgARMlX6IW-XgYoB9zWAvnWEBgVfI",
+//   authDomain: "car-wash-e356e.firebaseapp.com",
+//   projectId: "car-wash-e356e",
+//   storageBucket: "car-wash-e356e.appspot.com",
+//   messagingSenderId: "590379005904",
+//   appId: "1:590379005904:web:20c1a12590dbb50d3b6bd5",
+//   measurementId: "G-VC2J8DP20Q"
+// };
+//
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);

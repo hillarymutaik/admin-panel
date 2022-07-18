@@ -1,9 +1,9 @@
 //
 // import 'package:provider/responsive.dart';
 // import 'package:flutter/material.dart';
-// import 'package:provider/models/MyFiles.dart';
+// import 'package:provider/models/cards.dart';
 // import '../../../constants.dart';
-// import 'file_info_card.dart';
+// import 'dashboard_card.dart';
 //
 // class MyFiles extends StatelessWidget {
 //   const MyFiles({
