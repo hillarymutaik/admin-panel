@@ -9,4 +9,8 @@ LinearGradient gradient = LinearGradient(colors: [
   Color(0xff29ee86),
 ]);
 
+class ColorConstants {
+  static Color blue = Color(0xFF0D46BB);
+}
+
 const defaultPadding = 16.0;
