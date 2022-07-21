@@ -1,10 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SideMenu extends StatelessWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({
     Key? key,
   }) : super(key: key);
+
+  @override
+  _ComplexDrawerPageState createState() => _ComplexDrawerPageState();
+}
+
+class _ComplexDrawerPageState extends State<SideMenu> with SingleTickerProviderStateMixin{
+  int active = 0;
+  late TabController tabController = TabController(length: 5,vsync: this,initialIndex: 0);
+  //TODO: Add title
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 5, vsync: this, initialIndex: 0)
+      ..addListener(() {
+        setState(() {
+          active = tabController.index;
+        });
+      });
+  }
+
 
 
   @override
@@ -119,17 +139,28 @@ class SideMenu extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.report,color: Colors.blueGrey,),
                 title: const Text('Dashboard'),
+
+                selected: tabController.index == 0 ? true : false,
                 onTap: () {
-                  Navigator.of(context).pushReplacementNamed('/');
+                  tabController.animateTo(0);
                 },
+
+                // onTap: () {
+                //   Navigator.of(context).pushReplacementNamed('/home');
+                // },
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.dashboard,color: Colors.blueGrey,),
                 title: const Text('Modules'),
+                selected: tabController.index == 1 ? true : false,
                 onTap: () {
-                  Navigator.of(context).pushReplacementNamed("/");
+                  tabController.animateTo(1);
                 },
+
+                // onTap: () {
+                //   Navigator.of(context).pushReplacementNamed("/");
+                // },
               ),
               // const Divider(),
               ListTile(
@@ -344,7 +375,7 @@ class DrawerListTile extends StatelessWidget {
 // }
 // }
 
-
+//Install firebase SDK
 // npm install firebase
 //
 // // Import the functions you need from the SDKs you need
@@ -368,3 +399,16 @@ class DrawerListTile extends StatelessWidget {
 // // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+
+
+//#Install firebase CLI
+// npm install -g firebase-tools
+
+//1.Deploy firebase hosting
+//firebase login
+
+//initiate project
+// firebase init
+
+//Deploy web app
+//firebase deploy
