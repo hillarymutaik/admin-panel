@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+import '../../responsive.dart';
 import '../main/main_screen.dart';
 
 
@@ -49,8 +50,8 @@ class _LoginState extends State<Login> {
           );
         },
         padding: EdgeInsets.all(12),
-        color: ColorConstants.blue,
-        child: Text('Log In',
+        color: gColor,
+        child: Text('Login',
             style: TextStyle(
                 fontSize: 16,
                 color: Colors.white,
@@ -74,41 +75,41 @@ class _LoginState extends State<Login> {
               Container(
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width,
-                color: Colors.white,
+                color: Colors.blue,
               ),
               Container(
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width,
-                color: ColorConstants.blue,
+                color: gColor,
               ),
             ],
           ),
           Center(
             child: Card(
-              elevation: 2.0,
+              elevation: 1.0,
               child: Container(
-                padding: EdgeInsets.all(42),
+                padding: EdgeInsets.all(12),
                 width: MediaQuery.of(context).size.width / 2.5,
                 height: MediaQuery.of(context).size.height / 1.5,
                 child: Column(
                   children: <Widget>[
-                    SizedBox(height: 62.0),
+                    SizedBox(height: 1.0),
                     Center(
-                        child: Text(
-                          "Admin Material",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )),
-                    SizedBox(height: 48.0),
+                      child:Image.asset(
+                        "assets/images/logo.png",
+                        height: 100.0,
+                      ),
+                    ),
+                    SizedBox(height: 8.0),
                     email,
                     SizedBox(height: 8.0),
                     password,
                     SizedBox(height: 24.0),
+                    if (Responsive.isMobile(context)) Column(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
+                        if (Responsive.isMobile(context)) Column(),
                         Row(
                           children: <Widget>[
                             Checkbox(
@@ -125,7 +126,7 @@ class _LoginState extends State<Login> {
                         forgotLabel,
                       ],
                     ),
-                    SizedBox(height: 18.0),
+                    SizedBox(height: 25.0),
                     loginButton,
                   ],
                 ),
