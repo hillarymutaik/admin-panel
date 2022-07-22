@@ -77,7 +77,7 @@ class CarWash extends StatelessWidget {
             .apply(bodyColor: Colors.black87),
         canvasColor: bgColor,
       ),
-      home: MainScreen(),
+      home: LoginScreens(),
       routes: {
     // MainScreen.routeName: (context) => MainScreen(),
     ModuleScreen.routeName: (context) => ModuleScreen(),
@@ -99,7 +99,6 @@ class CarWash extends StatelessWidget {
     BookingStatus.routeName: (context) => BookingStatus(),
 
     OptionGroups.routeName: (context) => OptionGroups(),
-    ServiceOptions.routeName: (context) => ServiceOptions(),
     ServiceList.routeName: (context) => ServiceList(),
     ServiceReviews.routeName: (context) => ServiceReviews(),
     Currencies.routeName: (context) => Currencies(),
