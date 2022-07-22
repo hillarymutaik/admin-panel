@@ -74,6 +74,27 @@
       }, 10000)
     }
   </script>
+
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyANv4PgARMlX6IW-XgYoB9zWAvnWEBgVfI",
+    authDomain: "car-wash-e356e.firebaseapp.com",
+    projectId: "car-wash-e356e",
+    storageBucket: "car-wash-e356e.appspot.com",
+    messagingSenderId: "590379005904",
+    appId: "1:590379005904:web:20c1a12590dbb50d3b6bd5",
+    measurementId: "G-VC2J8DP20Q"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 </body>
 
 </html>

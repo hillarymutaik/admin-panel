@@ -11,8 +11,8 @@ import 'components/provider_details.dart';
 class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
+    return Scaffold(
+      body: SingleChildScrollView(
         primary: false,
         padding: EdgeInsets.all(defaultPadding),
         child: Column(

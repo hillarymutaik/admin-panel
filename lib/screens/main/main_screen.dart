@@ -1,12 +1,36 @@
 import 'package:car_wash/controllers/MenuController.dart';
 import 'package:car_wash/responsive.dart';
 import 'package:car_wash/screens/dashboard/dashboard_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
+  static const String routeName ='/';
+  const MainScreen({ Key? key }) : super(key: key);
+
+//   @override
+//   _ComplexDrawerPageState createState() => _ComplexDrawerPageState();
+// }
+//
+//   class _ComplexDrawerPageState extends State<MainScreen> with SingleTickerProviderStateMixin{
+//         int active = 0;
+//         late TabController tabController = TabController(length: 5,vsync: this,initialIndex: 0);
+//       //TODO: Add title
+//         @override
+//         void initState() {
+//         super.initState();
+//         tabController = TabController(length: 5, vsync: this, initialIndex: 0)
+//         ..addListener(() {
+//         setState(() {
+//         active = tabController.index;
+//         });
+//         });
+//         }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
