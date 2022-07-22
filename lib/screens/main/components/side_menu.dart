@@ -1,87 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../routes/routes.dart';
+
+
 class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
   }) : super(key: key);
 
+//   @override
+//   _ComplexDrawerPageState createState() => _ComplexDrawerPageState();
+// }
+//
+// class _ComplexDrawerPageState extends State<SideMenu> with SingleTickerProviderStateMixin{
+//   int active = 0;
+//   late TabController tabController = TabController(length: 5,vsync: this,initialIndex: 0);
+//   //TODO: Add title
+//   @override
+//   void initState() {
+//     super.initState();
+//     tabController = TabController(length: 5, vsync: this, initialIndex: 0)
+//       ..addListener(() {
+//         setState(() {
+//           active = tabController.index;
+//         });
+//       });
+//   }
+
+
 
   @override
-  // Widget build(BuildContext context) {
-  //   return Drawer(
-  //     child: ListView(
-  //       children: [
-  //         DrawerHeader(
-  //           child: Image.asset("assets/images/logo.png"),
-  //         ),
-  //         DrawerListTile(
-  //           title: "Dashboard",
-  //           svgSrc: "assets/icons/menu_dashbord.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Modules",
-  //           svgSrc: "assets/icons/menu_tran.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Notification",
-  //           svgSrc: "assets/icons/menu_task.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Favourites",
-  //           svgSrc: "assets/icons/menu_doc.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "App Management",
-  //           svgSrc: "assets/icons/menu_store.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Providers",
-  //           svgSrc: "assets/icons/menu_notification.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Categories",
-  //           svgSrc: "assets/icons/menu_profile.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Services",
-  //           svgSrc: "assets/icons/menu_profile.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Bookings",
-  //           svgSrc: "assets/icons/menu_profile.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Coupons",
-  //           svgSrc: "assets/icons/menu_profile.svg",
-  //           press: () {},
-  //         ),
-  //
-  //         DrawerListTile(
-  //           title: "FAQs",
-  //           svgSrc: "assets/icons/menu_profile.svg",
-  //           press: () {},
-  //         ),
-  //         DrawerListTile(
-  //           title: "Settings",
-  //           svgSrc: "assets/icons/menu_setting.svg",
-  //           press: () {},
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
-
-
   Widget build(BuildContext context) {
     return Drawer(
       width: MediaQuery
@@ -94,6 +43,12 @@ class SideMenu extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // DrawerHeader(
+              //   child: SvgPicture.asset(
+              //     'assets/icons/flutter-admin-kit.svg',
+              //     height: 80,
+              //   ),
+              // ),
               DrawerHeader(
                 child: Image.asset("assets/images/logo.png"),
                 decoration: BoxDecoration(
@@ -119,72 +74,92 @@ class SideMenu extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.report,color: Colors.blueGrey,),
                 title: const Text('Dashboard'),
-                onTap: () {
-                  Navigator.of(context).pushReplacementNamed('/');
-                },
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, PageRoutes.home),
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.dashboard,color: Colors.blueGrey,),
                 title: const Text('Modules'),
-                onTap: () {
-                  Navigator.of(context).pushReplacementNamed("/");
-                },
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, PageRoutes.modules),
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.notifications_outlined,color: Colors.blueGrey,),
                 title: const Text('Notifications'),
-                onTap: () {},
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, PageRoutes.notification),
+                // onTap: () {
+                //   Navigator.of(context).pushReplacementNamed("/notification");
+                // },
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.favorite,color: Colors.blueGrey,),
                 title: const Text('Favourites'),
-                onTap: () {},
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, PageRoutes.favourites),
+                // onTap: () {
+                //   Navigator.of(context).pushReplacementNamed("/favourites");
+                // },
               ),
               const SizedBox(
                 height: 30,
               ),
-              const Text('App Managemnent'),
+              const Text('App Management'),
               const Divider(),
               ListTile(
                 leading: const Icon(Icons.manage_accounts_rounded,color: Colors.blueGrey,),
                 title: const Text('Providers'),
-                onTap: () {},
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, PageRoutes.provider),
+                // onTap: () {
+                //   Navigator.of(context).pushReplacementNamed("/providers");
+                // },
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.folder_open_rounded,color: Colors.blueGrey,),
                 title: const Text('Categories'),
-                onTap: () {},
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, PageRoutes.category),
+                // onTap: () {
+                //   Navigator.of(context).pushReplacementNamed("/categories");
+                // },
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.design_services_rounded,color: Colors.blueGrey,),
                 title: const Text('Services'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.service),
+                // onTap: () {
+                //   Navigator.pushNamed(context, '/services');
+                // },
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.today_rounded,color: Colors.blueGrey,),
                 title: const Text('Bookings'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.booking),
+
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.calendar_view_day_rounded,color: Colors.blueGrey,),
                 title: const Text('Coupons'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.coupons),
+
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.help_rounded,color: Colors.blueGrey,),
                 title: const Text('Faqs'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.faqs),
+
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
               const SizedBox(
@@ -195,14 +170,16 @@ class SideMenu extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.payment_rounded,color: Colors.blueGrey,),
                 title: const Text('Payments'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.paymentlist),
+
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
               // const Divider(),
               ListTile(
                 leading: const Icon(Icons.wallet_rounded,color: Colors.blueGrey,),
                 title: const Text('Wallets'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.walletlist),
+
               ),
               // const Divider(),
               ListTile(
@@ -214,7 +191,7 @@ class SideMenu extends StatelessWidget {
                 height: 30,
               ),
               const Text('Settings'),
-              // const Divider(),
+              const Divider(),
               ListTile(
                 leading: const Icon(Icons.perm_media_rounded,color: Colors.blueGrey,),
                 title: const Text('Medias Library'),
@@ -227,9 +204,71 @@ class SideMenu extends StatelessWidget {
                 onTap: () {},
               ),
               // const Divider(),
+              const Text('Settings'),
+              const Divider(),
               ListTile(
                 leading: const Icon(Icons.settings_suggest_rounded,color: Colors.blueGrey,),
-                title: const Text('Settings'),
+                title: const Text('Global Settings'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.people,color: Colors.blueGrey,),
+                title: const Text('Users'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.rotate_left_sharp,color: Colors.blueGrey,),
+                title: const Text('Roles & Permissions'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.local_activity_outlined,color: Colors.blueGrey,),
+                title: const Text('Localization'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.transfer_within_a_station,color: Colors.blueGrey,),
+                title: const Text('Transactions'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.attach_money_outlined,color: Colors.blueGrey,),
+                title: const Text('Currencies'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.discount,color: Colors.blueGrey,),
+                title: const Text('Taxes'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.monetization_on_sharp,color: Colors.blueGrey,),
+                title: const Text('Payment'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.social_distance_outlined,color: Colors.blueGrey,),
+                title: const Text('Social Authentication'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.notifications_active_outlined,color: Colors.blueGrey,),
+                title: const Text('Push Notification'),
+                onTap: () {},
+                trailing: const Icon(Icons.chevron_left_rounded),
+              ),
+              ListTile(
+                leading: const Icon(Icons.settings_suggest_rounded,color: Colors.blueGrey,),
+                title: const Text('Mail'),
                 onTap: () {},
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
@@ -344,7 +383,7 @@ class DrawerListTile extends StatelessWidget {
 // }
 // }
 
-
+//Install firebase SDK
 // npm install firebase
 //
 // // Import the functions you need from the SDKs you need
@@ -368,3 +407,16 @@ class DrawerListTile extends StatelessWidget {
 // // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+
+
+//#Install firebase CLI
+// npm install -g firebase-tools
+
+//1.Deploy firebase hosting
+//firebase login
+
+//initiate project
+// firebase init
+
+//Deploy web app
+//firebase deploy
