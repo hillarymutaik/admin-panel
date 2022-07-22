@@ -2,6 +2,7 @@ import 'package:car_wash/screens/dashboard/components/bookings/booking_status.da
 import 'package:car_wash/screens/dashboard/components/bookings/bookings.dart';
 import 'package:car_wash/screens/dashboard/components/categories.dart';
 import 'package:car_wash/screens/dashboard/components/coupons.dart';
+import 'package:car_wash/screens/dashboard/components/earnings.dart';
 import 'package:car_wash/screens/dashboard/components/faqs/faqs.dart';
 import 'package:car_wash/screens/dashboard/components/faqs/faqs_category.dart';
 import 'package:car_wash/screens/dashboard/components/favourites.dart';
@@ -77,7 +78,7 @@ class CarWash extends StatelessWidget {
             .apply(bodyColor: Colors.black87),
         canvasColor: bgColor,
       ),
-      home: LoginScreens(),
+      home: MainScreen(),
       routes: {
     // MainScreen.routeName: (context) => MainScreen(),
     ModuleScreen.routeName: (context) => ModuleScreen(),
@@ -114,6 +115,7 @@ class CarWash extends StatelessWidget {
     Themes.routeName: (context) => Themes(),
     MobileAuthentication.routeName: (context) => MobileAuthentication(),
         CreateService.routeName: (context) => CreateService(),
+        RecentFiles.routeName: (context) => RecentFiles(),
     }
     ));
   }

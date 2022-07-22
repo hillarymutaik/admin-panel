@@ -179,7 +179,7 @@ class SideMenu extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.price_change_rounded,color: Colors.blueGrey,),
                 title: const Text('Earnings'),
-                onTap: () {},
+                onTap: () => Navigator.pushReplacementNamed(context, PageRoutes.earning),
               ),
               const SizedBox(
                 height: 30,

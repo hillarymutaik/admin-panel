@@ -1,6 +1,7 @@
 import 'package:car_wash/screens/dashboard/components/bookings/booking_status.dart';
 import 'package:car_wash/screens/dashboard/components/bookings/bookings.dart';
 import 'package:car_wash/screens/dashboard/components/categories.dart';
+import 'package:car_wash/screens/dashboard/components/earnings.dart';
 import 'package:car_wash/screens/dashboard/components/faqs/faqs.dart';
 import 'package:car_wash/screens/dashboard/components/faqs/faqs_category.dart';
 import 'package:car_wash/screens/dashboard/components/favourites.dart';
@@ -72,5 +73,7 @@ class PageRoutes {
   static const String theme = Themes.routeName;
   static const String mobileauthentication = MobileAuthentication.routeName;
   static const String createservice = CreateService.routeName;
+  static const String earning = RecentFiles.routeName;
+
 
 }

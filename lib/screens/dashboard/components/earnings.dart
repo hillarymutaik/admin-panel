@@ -1,12 +1,11 @@
 import 'package:car_wash/models/earning_items.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
-import '../../../table/table/responsive_datatable.dart';
 
 class RecentFiles extends StatelessWidget {
+  static const String routeName ='/earning';
   const RecentFiles({
     Key? key,
   }) : super(key: key);
