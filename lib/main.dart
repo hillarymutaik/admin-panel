@@ -1,3 +1,20 @@
+import 'package:car_wash/screens/dashboard/components/bookings/booking_status.dart';
+import 'package:car_wash/screens/dashboard/components/bookings/bookings.dart';
+import 'package:car_wash/screens/dashboard/components/categories.dart';
+import 'package:car_wash/screens/dashboard/components/coupons.dart';
+import 'package:car_wash/screens/dashboard/components/faqs/faqs.dart';
+import 'package:car_wash/screens/dashboard/components/faqs/faqs_category.dart';
+import 'package:car_wash/screens/dashboard/components/favourites.dart';
+import 'package:car_wash/screens/dashboard/components/modules.dart';
+import 'package:car_wash/screens/dashboard/components/notifications.dart';
+import 'package:car_wash/screens/dashboard/components/payments/payment_methods.dart';
+import 'package:car_wash/screens/dashboard/components/payments/payment_status.dart';
+import 'package:car_wash/screens/dashboard/components/payments/payments.dart';
+import 'package:car_wash/screens/dashboard/components/payments/provider_payouts.dart';
+import 'package:car_wash/screens/dashboard/components/providers_screen.dart';
+import 'package:car_wash/screens/dashboard/components/services.dart';
+import 'package:car_wash/screens/dashboard/components/wallets/wallet_list.dart';
+import 'package:car_wash/screens/dashboard/components/wallets/wallet_transaction.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:car_wash/constants.dart';
 import 'package:car_wash/controllers/MenuController.dart';
@@ -29,23 +46,42 @@ class CarWash extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiProvider(
+        providers: [
+        ChangeNotifierProvider(
+        create: (context) => MenuController(),
+    ),
+    ],
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Arcade Carwash',
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: bgColor,
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.black),
-        canvasColor: secondaryColor,
+            .apply(bodyColor: Colors.black87),
+        canvasColor: bgColor,
       ),
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (context) => MenuController(),
-          ),
-        ],
-        child: Login(title: '',),
-      ),
-    );
+      home: MainScreen(),
+      routes: {
+    // MainScreen.routeName: (context) => MainScreen(),
+    ModuleScreen.routeName: (context) => ModuleScreen(),
+    FavouriteScreen.routeName: (context) => FavouriteScreen(),
+    ProviderScreen.routeName: (context) => ProviderScreen(),
+    NotificationScreen.routeName: (context) => NotificationScreen(),
+    CategoryScreen.routeName: (context) => CategoryScreen(),
+    ServicesScreen.routeName: (context) => ServicesScreen(),
+    Coupons.routeName: (context) => Coupons(),
+    WalletList.routeName: (context) => WalletList(),
+    WalletTransaction.routeName: (context) => WalletTransaction(),
+    PaymentScreen.routeName: (context) => PaymentScreen(),
+    PaymentMethod.routeName: (context) => PaymentMethod(),
+    PaymentStatus.routeName: (context) => PaymentStatus(),
+    ProviderPayout.routeName: (context) => ProviderPayout(),
+    FaqsScreen.routeName: (context) => FaqsScreen(),
+    FaqsCatScreen.routeName: (context) => FaqsCatScreen(),
+    Bookings.routeName: (context) => Bookings(),
+    BookingStatus.routeName: (context) => BookingStatus(),
+    }
+    ));
   }
 }
