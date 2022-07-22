@@ -15,8 +15,8 @@ import 'package:car_wash/screens/dashboard/components/providers_screen.dart';
 import 'package:car_wash/screens/dashboard/components/services.dart';
 import 'package:car_wash/screens/dashboard/components/wallets/wallet_list.dart';
 import 'package:car_wash/screens/dashboard/components/wallets/wallet_transaction.dart';
-import 'package:car_wash/screens/login/animated_login.dart';
-import 'package:car_wash/screens/main/main_screen.dart';
+import 'package:car_wash/screens/dashboard/dashboard_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:car_wash/constants.dart';
 import 'package:car_wash/controllers/MenuController.dart';
@@ -25,6 +25,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
+//
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Database database = FirebaseHelper.initDatabase();
@@ -61,7 +62,16 @@ class CarWash extends StatelessWidget {
                       .apply(bodyColor: Colors.black87),
               canvasColor: bgColor,
             ),
-            home: AuthScreen(),
+            home: StreamBuilder(
+              stream: FirebaseAuth.instance.authStateChanges(),
+              builder: ((context, snapshot) {
+                if (snapshot.hasData) {
+                  return DashboardScreen();
+                } else {
+                  return AuthScreen();
+                }
+              }),
+            ),
             routes: {
               // MainScreen.routeName: (context) => MainScreen(),
               ModuleScreen.routeName: (context) => ModuleScreen(),
