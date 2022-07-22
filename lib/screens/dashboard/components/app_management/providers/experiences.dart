@@ -2,18 +2,19 @@ import 'package:car_wash/responsive.dart';
 import 'package:car_wash/screens/dashboard/components/provider_details.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../constants.dart';
-import '../../../controllers/MenuController.dart';
-import '../../main/components/side_menu.dart';
-import 'earnings.dart';
-import 'header.dart';
 import 'package:car_wash/controllers/MenuController.dart';
 
+import '../../../../../constants.dart';
+import '../../../../main/components/side_menu.dart';
+import '../../dashboard_fields.dart';
+import '../../earnings.dart';
+import '../../header.dart';
 
-class ServicesScreen extends StatelessWidget {
-  static const String routeName ='/ServicesScreen';
 
-  const ServicesScreen({ Key? key }) : super(key: key);
+class Experiences extends StatelessWidget {
+  static const String routeName ='/experiences';
+
+  const Experiences({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +37,7 @@ class ServicesScreen extends StatelessWidget {
               flex: 5,
               child: FavouriteComponents(),
             ),
+
           ],
         ),
       ),
@@ -55,10 +57,10 @@ class FavouriteComponents extends StatelessWidget {
             Header(),
             SizedBox(height: defaultPadding),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Services | System Overview",
+                  "Favourites | System Overview",
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
                 ElevatedButton.icon(
@@ -69,9 +71,9 @@ class FavouriteComponents extends StatelessWidget {
                       defaultPadding / (Responsive.isMobile(context) ? 2 : 1),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {createDataDialog;},
                   icon: Icon(Icons.add),
-                  label: Text("Add New Services"),
+                  label: Text("Add Experiences"),
                 ),
               ],
             ),
@@ -106,3 +108,4 @@ class FavouriteComponents extends StatelessWidget {
     );
   }
 }
+

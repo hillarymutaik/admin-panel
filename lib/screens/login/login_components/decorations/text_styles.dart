@@ -49,8 +49,8 @@ class TextStyles {
   /// Such as: "BaseText"/"NotFittedText" texts and so on.
   TextStyle normalStyle({Color? color}) => TextStyle(
         fontSize: _dynamicSize.responsiveSize * 10,
-        color: color ?? Colors.white.withOpacity(.8),
-        fontWeight: FontWeight.w500,
+        color: color ?? Colors.black38.withOpacity(.1),
+        fontWeight: FontWeight.w700,
         wordSpacing: 3,
         letterSpacing: 1.2,
       );
@@ -59,8 +59,8 @@ class TextStyles {
   /// Such as: "CustomTextFormField"/"ObscuredTextFormFields" texts.
   TextStyle textFormStyle({Color? color}) => TextStyle(
         fontSize: _dynamicSize.responsiveSize * 5.2,
-        color: color ?? Theme.of(context).secondaryHeaderColor,
-        fontWeight: FontWeight.w400,
+        color: Colors.black,
+        fontWeight: FontWeight.w500,
         wordSpacing: 1.1,
         letterSpacing: .7,
       );
@@ -69,7 +69,7 @@ class TextStyles {
   /// Such as: "CustomTextFormField"/"ObscuredTextFormFields" hint texts.
   TextStyle hintTextStyle({Color? color}) => TextStyle(
         fontSize: _dynamicSize.responsiveSize * 5.2,
-        color: Colors.lightGreenAccent,
+        color: Colors.black,
         fontWeight: FontWeight.w400,
         wordSpacing: 1.1,
         letterSpacing: .7,
@@ -90,7 +90,7 @@ class TextStyles {
           {Color? color, FontWeight? fontWeight, TextDecoration? decoration}) =>
       TextStyle(
         fontSize: _dynamicSize.responsiveSize * 4.8,
-        color: color ?? Colors.white.withOpacity(.8),
+        color: color ?? Colors.black.withOpacity(.8),
         fontWeight: fontWeight ?? FontWeight.w400,
         decoration: decoration,
       );

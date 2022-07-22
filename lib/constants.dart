@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const primaryColor = Color(0xff3fa0d7);
 const secondaryColor = Color(0xFFE9ECEF);
-const bgColor = Color(0xFFCFD8DC);
+const bgColor = Color(0xFFDFD8DD);
 const gColor = Color(0xff29ee86);
 const tColor = Color(0xff297809);
 LinearGradient gradient = LinearGradient(colors: [

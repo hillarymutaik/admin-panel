@@ -38,6 +38,7 @@ dependencies:
   firebase_analytics: ^9.2.0
   firebase_helpers: ^0.5.0
   firebase_database: ^9.0.19
+  flutter_form_builder: ^6.1.0+1
 
   fl_chart: ^0.55.0
 

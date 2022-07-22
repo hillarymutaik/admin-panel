@@ -24,7 +24,7 @@ class ButtonStyles {
   }) =>
       ButtonStyle(
         padding: _all<EdgeInsets?>(padding),
-        backgroundColor: _all<Color>(backgroundColor ?? Colors.white),
+        backgroundColor: _all<Color>(backgroundColor ?? Colors.blueAccent),
         fixedSize: _all<Size>(Size(
             size?.width ?? double.maxFinite, size?.height ?? double.maxFinite)),
         minimumSize: _all<Size>(Size.zero),
@@ -33,9 +33,9 @@ class ButtonStyles {
         shape: _all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
-                borderRadius ?? const BorderRadius.all(Radius.circular(30)),
+                borderRadius ?? const BorderRadius.all(Radius.circular(10)),
             side: BorderSide(
-              color: borderColor ?? Theme.of(context).primaryColor,
+              color: Colors.black45,
               width: borderWidth ?? 2.0,
             ),
           ),

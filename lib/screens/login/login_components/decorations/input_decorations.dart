@@ -40,7 +40,7 @@ class InputDeco {
           ),
       fillColor: loginTheme.formFieldBackgroundColor ??
           loginTheme.backgroundColor?.withOpacity(.8) ??
-          Colors.white54,
+          Colors.black,
       hoverColor: loginTheme.formFieldHoverColor ??
           Theme.of(context).primaryColorLight.withOpacity(.1),
       hintText: hintText,

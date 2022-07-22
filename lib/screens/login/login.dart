@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreens> {
   LoginViewTheme get _desktopTheme => _mobileTheme.copyWith(
     // To set the color of button text, use foreground color.
     actionButtonStyle: ButtonStyle(
-      foregroundColor: MaterialStateProperty.all(Colors.white),
+      foregroundColor: MaterialStateProperty.all(Colors.white30),
     ),
     dialogTheme: const AnimatedDialogTheme(
       languageDialogTheme: LanguageDialogTheme(
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreens> {
   /// You can also set some additional display options such as [showLabelTexts].
   LoginViewTheme get _mobileTheme => LoginViewTheme(
     // showLabelTexts: false,
-    backgroundColor: Colors.white60, // const Color(0xFF6666FF),
+    backgroundColor: Colors.blueGrey, // const Color(0xFF6666FF),
     formFieldBackgroundColor: Colors.white,
     formWidthRatio: 60,
     // actionButtonStyle: ButtonStyle(

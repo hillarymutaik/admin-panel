@@ -12,13 +12,29 @@ import 'package:car_wash/screens/dashboard/components/payments/payment_status.da
 import 'package:car_wash/screens/dashboard/components/payments/payments.dart';
 import 'package:car_wash/screens/dashboard/components/payments/provider_payouts.dart';
 import 'package:car_wash/screens/dashboard/components/providers_screen.dart';
-import 'package:car_wash/screens/dashboard/components/services.dart';
+import 'package:car_wash/screens/dashboard/components/services/create_service/create_service_forms.dart';
+import 'package:car_wash/screens/dashboard/components/services/option_groups.dart';
+import 'package:car_wash/screens/dashboard/components/services/service_options.dart';
+import 'package:car_wash/screens/dashboard/components/services/services_list.dart';
+import 'package:car_wash/screens/dashboard/components/services/swervice_reviews.dart';
+import 'package:car_wash/screens/dashboard/components/settings/currencies.dart';
+import 'package:car_wash/screens/dashboard/components/settings/custom_fields.dart';
+import 'package:car_wash/screens/dashboard/components/settings/global_setings.dart';
+import 'package:car_wash/screens/dashboard/components/settings/mail.dart';
+import 'package:car_wash/screens/dashboard/components/settings/push_notification.dart';
+import 'package:car_wash/screens/dashboard/components/settings/roles_and_permissions.dart';
+import 'package:car_wash/screens/dashboard/components/settings/social_authentication.dart';
+import 'package:car_wash/screens/dashboard/components/settings/users.dart';
+import 'package:car_wash/screens/dashboard/components/settings_media_library/mobile_app_settings/custom_pages.dart';
+import 'package:car_wash/screens/dashboard/components/settings_media_library/mobile_app_settings/mobile_authentication.dart';
+import 'package:car_wash/screens/dashboard/components/settings_media_library/mobile_app_settings/slides.dart';
+import 'package:car_wash/screens/dashboard/components/settings_media_library/mobile_app_settings/theme.dart';
 import 'package:car_wash/screens/dashboard/components/wallets/wallet_list.dart';
 import 'package:car_wash/screens/dashboard/components/wallets/wallet_transaction.dart';
+import 'package:car_wash/screens/main/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:car_wash/constants.dart';
 import 'package:car_wash/controllers/MenuController.dart';
-import 'package:car_wash/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -69,7 +85,7 @@ class CarWash extends StatelessWidget {
     ProviderScreen.routeName: (context) => ProviderScreen(),
     NotificationScreen.routeName: (context) => NotificationScreen(),
     CategoryScreen.routeName: (context) => CategoryScreen(),
-    ServicesScreen.routeName: (context) => ServicesScreen(),
+    ServiceOptions.routeName: (context) => ServiceOptions(),
     Coupons.routeName: (context) => Coupons(),
     WalletList.routeName: (context) => WalletList(),
     WalletTransaction.routeName: (context) => WalletTransaction(),
@@ -81,6 +97,24 @@ class CarWash extends StatelessWidget {
     FaqsCatScreen.routeName: (context) => FaqsCatScreen(),
     Bookings.routeName: (context) => Bookings(),
     BookingStatus.routeName: (context) => BookingStatus(),
+
+    OptionGroups.routeName: (context) => OptionGroups(),
+    ServiceOptions.routeName: (context) => ServiceOptions(),
+    ServiceList.routeName: (context) => ServiceList(),
+    ServiceReviews.routeName: (context) => ServiceReviews(),
+    Currencies.routeName: (context) => Currencies(),
+    CustomFields.routeName: (context) => CustomFields(),
+    GlobalSettings.routeName: (context) => GlobalSettings(),
+    Mail.routeName: (context) => Mail(),
+    PushNotifications.routeName: (context) => PushNotifications(),
+    RolesPermissions.routeName: (context) => RolesPermissions(),
+    SocialAuthentication.routeName: (context) => SocialAuthentication(),
+    Users.routeName: (context) => Users(),
+    CustomPages.routeName: (context) => CustomPages(),
+    Slides.routeName: (context) => Slides(),
+    Themes.routeName: (context) => Themes(),
+    MobileAuthentication.routeName: (context) => MobileAuthentication(),
+        CreateService.routeName: (context) => CreateService(),
     }
     ));
   }

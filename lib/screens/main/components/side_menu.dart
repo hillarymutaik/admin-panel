@@ -43,12 +43,6 @@ class SideMenu extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // DrawerHeader(
-              //   child: SvgPicture.asset(
-              //     'assets/icons/flutter-admin-kit.svg',
-              //     height: 80,
-              //   ),
-              // ),
               DrawerHeader(
                 child: Image.asset("assets/images/logo.png"),
                 decoration: BoxDecoration(

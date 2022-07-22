@@ -290,9 +290,9 @@ class _ChangeLanguageState extends State<_ChangeLanguage> {
 
   Color? _contentColor(BuildContext context) =>
       context.read<LoginTheme>().changeLangContentColor ??
-      Color.lerp(Colors.white, Theme.of(context).primaryColor,
+      Color.lerp(Colors.black38, Theme.of(context).primaryColor,
           widget.colorTween.value);
 
   Color? _buttonBgColor(BuildContext context) => Color.lerp(
-      Theme.of(context).primaryColor, Colors.white, widget.colorTween.value);
+      Theme.of(context).primaryColor, Colors.blueAccent, widget.colorTween.value);
 }

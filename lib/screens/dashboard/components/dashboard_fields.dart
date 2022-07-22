@@ -285,61 +285,64 @@ createDataDialog(BuildContext context) {
                       )),
                   flex: 1,
                 ),
-                // dialog bottom
-                // new Expanded(
-                //   child: new Container(
-                //     padding: new EdgeInsets.all(6.0),
-                //     decoration: new BoxDecoration(
-                //       color: const Color(0xFF33b17c),
-                //     ),
-                //     child: new Text(
-                //       'Book Now',
-                //       style: TextStyle(
-                //         color: Colors.white,
-                //         fontSize: 18.0,
-                //         fontFamily: 'helvetica_neue_light',
-                //       ),
-                //       textAlign: TextAlign.center,
-                //     ),
-                //   ),
-                // ),
+
+                // SizedBox(height: 50,),
+                // FadeAnimation(1.7, Text("Continue with social media", style: TextStyle(color: Colors.grey),)),
+
               ],
             ),
           ),
           actions: <Widget>[
-            FlatButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: new Text(
-              'CANCEL',
-            style: TextStyle(
-            color: Colors.blueAccent,
-            fontSize: 18.0,
-            fontFamily: 'helvetica_neue_light',
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            height: 30,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.grey
             ),
-            textAlign: TextAlign.center,
+            child: Center(
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("CANCEL",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.deepOrangeAccent,
+                      fontWeight: FontWeight.bold),),
+              ),
+
             ),
-            ),
+          ),
+
             SizedBox(width: 40,),
-            FlatButton(
-              onPressed: () {
-                // String key = databaseRef.push().key;
-                // databaseRef
-                //     .child(key)
-                //     .set({"text": nameController.text, "id": key});
-                Navigator.pop(context);
-              },
-              child:new Text(
-           'SUBMIT',
-            style: TextStyle(
-            color: Colors.blueAccent,
-            fontSize: 18.0,
-            fontFamily: 'helvetica_neue_light',
+          Container(
+            height: 30,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.blue
             ),
-            textAlign: TextAlign.center,
+            child: Center(
+              child: FlatButton(
+                onPressed: () {
+                  // String key = databaseRef.push().key;
+                  // databaseRef
+                  //     .child(key)
+                  //     .set({"text": nameController.text, "id": key});
+                  Navigator.pop(context);
+                },
+                child: Text("SUBMIT",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.black,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold),),
+              ),
+
             ),
-            ),
+          ),
+        ])
           ],
             );
 

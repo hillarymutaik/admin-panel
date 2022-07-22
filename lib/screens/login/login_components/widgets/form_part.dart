@@ -168,7 +168,7 @@ class _ActionButton extends StatelessWidget {
         onPressed: context.read<Auth>().action,
         backgroundColor: isLandscape
             ? Theme.of(context).primaryColor.withOpacity(.8)
-            : Colors.white,
+            : Colors.white60,
         buttonStyle: loginTheme.actionButtonStyle,
       ),
     );
@@ -197,7 +197,7 @@ class _FormTitle extends StatelessWidget {
             ? loginTexts.loginFormTitle
             : loginTexts.signUpFormTitle,
         style: TextStyles(context)
-            .titleStyle(color: loginTheme.isLandscape ? null : Colors.white)
+            .titleStyle(color: loginTheme.isLandscape ? null : Colors.black)
             .merge(loginTheme.formTitleStyle),
       ),
     );
@@ -229,7 +229,7 @@ class _SocialLoginOptions extends StatelessWidget {
       auth.socialLogins!.length,
       (int index) => CircleWidget(
         onTap: () async => auth.socialLoginCallback(index),
-        color: isLandscape ? null : Colors.white,
+        color: isLandscape ? null : Colors.black,
         widthFactor: isLandscape ? 13 : 16,
         child: Image.asset(auth.socialLogins![index].iconPath),
       ),
