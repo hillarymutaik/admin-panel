@@ -1,19 +1,19 @@
 import 'package:car_wash/models/earning_items.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
-import '../../../responsive.dart';
 
 class RecentFiles extends StatelessWidget {
+  static const String routeName ='/earning';
   const RecentFiles({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Material(
+      child:Container(
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
         color: secondaryColor,
@@ -22,55 +22,53 @@ class RecentFiles extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Earnings",
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Earnings",
-                style: Theme.of(context).textTheme.subtitle1,
+                  Text(
+                    "All payments",
+                    style: Theme.of(context).textTheme.subtitle1,
+
+                  ),
+
+                  // if (!Responsive.isMobile(context));
+                    // Padding(
+                    //   padding:
+                    //   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                    //   child: Text("Arcade Carwash"),
+                    // ),
+                ],
               ),
-
-              Text(
-                "All payments",
-                style: Theme.of(context).textTheme.subtitle1,
-
+              Container(
+                width: double.infinity,
+                child: DataTable2(
+                  columnSpacing: defaultPadding,
+                  minWidth: 400,
+                  columns: [
+                    DataColumn(
+                      label: Text("Earning over time"),
+                    ),
+                    DataColumn(
+                      label: Text("Total Booking"),
+                    ),
+                    // DataColumn(
+                    //   label: Text("Size"),
+                    // ),
+                  ],
+                  rows: List.generate(
+                    demoRecentFiles.length,
+                    (index) => recentFileDataRow(demoRecentFiles[index]),
+                  ),
+                ),
               ),
-
-              // if (!Responsive.isMobile(context));
-                // Padding(
-                //   padding:
-                //   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-                //   child: Text("Arcade Carwash"),
-                // ),
             ],
           ),
-
-
-          SizedBox(
-            width: double.infinity,
-            child: DataTable2(
-              columnSpacing: defaultPadding,
-              minWidth: 400,
-              columns: [
-                DataColumn(
-                  label: Text("Earning over time"),
-                ),
-                DataColumn(
-                  label: Text("Total Booking"),
-                ),
-                // DataColumn(
-                //   label: Text("Size"),
-                // ),
-              ],
-              rows: List.generate(
-                demoRecentFiles.length,
-                (index) => recentFileDataRow(demoRecentFiles[index]),
-              ),
-            ),
-          ),
-        ],
-      ),
+      )
     );
   }
 }
@@ -98,3 +96,5 @@ DataRow recentFileDataRow(RecentFile fileInfo) {
     ],
   );
 }
+
+
