@@ -36,7 +36,7 @@ class SideMenu extends StatelessWidget {
       width: MediaQuery
           .of(context)
           .size
-          .width * .4,
+          .width * .5,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
@@ -50,20 +50,6 @@ class SideMenu extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(3)),
                 ),
               ),
-              // const SizedBox(
-              //   height: 50,
-              //   child: ListTile(
-              //     tileColor: Colors.blueGrey,
-              //     title: Text(
-              //       'Arcade Carwash',
-              //       style: TextStyle(color: Colors.white, fontSize: 22),
-              //     ),
-              //     leading: Icon(
-              //       Icons.local_shipping_rounded,
-              //       color: Colors.white,
-              //     ),
-              //   ),
-              // ),
               // const Divider(color: Colors.lightGreenAccent, thickness: 2,),
               ListTile(
                 leading: const Icon(Icons.report,color: Colors.blueGrey,),
@@ -84,9 +70,6 @@ class SideMenu extends StatelessWidget {
                 title: const Text('Notifications'),
                 onTap: () =>
                     Navigator.pushReplacementNamed(context, PageRoutes.notification),
-                // onTap: () {
-                //   Navigator.of(context).pushReplacementNamed("/notification");
-                // },
               ),
               // const Divider(),
               ListTile(
@@ -94,9 +77,6 @@ class SideMenu extends StatelessWidget {
                 title: const Text('Favourites'),
                 onTap: () =>
                     Navigator.pushReplacementNamed(context, PageRoutes.favourites),
-                // onTap: () {
-                //   Navigator.of(context).pushReplacementNamed("/favourites");
-                // },
               ),
               const SizedBox(
                 height: 30,
@@ -108,9 +88,6 @@ class SideMenu extends StatelessWidget {
                 title: const Text('Providers'),
                 onTap: () =>
                     Navigator.pushReplacementNamed(context, PageRoutes.provider),
-                // onTap: () {
-                //   Navigator.of(context).pushReplacementNamed("/providers");
-                // },
                 trailing: const Icon(Icons.chevron_left_rounded),
               ),
               // const Divider(),
@@ -119,9 +96,6 @@ class SideMenu extends StatelessWidget {
                 title: const Text('Categories'),
                 onTap: () =>
                     Navigator.pushReplacementNamed(context, PageRoutes.category),
-                // onTap: () {
-                //   Navigator.of(context).pushReplacementNamed("/categories");
-                // },
               ),
               // const Divider(),
               ListTile(
